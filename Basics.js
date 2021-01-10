@@ -35,5 +35,48 @@ fruits.unshift('strawberries'); //adds strawberries to beginning
 fruits.pop(); //take out last
 console.log(fruits);
 console.log(fruits.indexOf('oranges'));
-
 console.log(Array.isArray(fruits)); //checks if something is an array
+
+//object literals
+const person = {
+  firstName: 'John',
+  lastName: "Doe",
+  age: 30,
+  hobbies: ['music', 'movies', 'sports'],
+  address: {
+    street: '50 main st',
+    city: 'Boston',
+    state: 'MA'
+  }
+}
+console.log(person.firstName, person.lastName);
+console.log(person.hobbies[1]);
+
+person.email = 'johndoe@person';
+console.log(person.email);
+
+//Array of object literals
+const todos = [
+  {
+    id: 1,
+    text: 'Take out trash',
+    isCompleted: true
+  },
+  {
+    id: 2,
+    text: 'Meeting with boss',
+    isCompleted: true
+  },
+  {
+    id: 3,
+    text: 'Dentist appt',
+    isCompleted: false
+  }
+];
+
+console.log(todos);
+
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
+
+//for loops are the same as java
