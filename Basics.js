@@ -80,3 +80,32 @@ const todoJSON = JSON.stringify(todos);
 console.log(todoJSON);
 
 //for loops are the same as java
+for (let i = 0; i < todos.length; i++) {
+  console.log(todos[i].text);
+}
+//while
+let i = 0;
+while (i < 10) {
+  console.log("hello" + i);
+  i++;
+}
+//for of
+for (let todo of todos) {
+  console.log(todo.text);
+}
+
+//forEach, map, filter
+todos.forEach(function(todo) {
+  console.log(todo.text);
+});
+
+const todoText = todos.map(function(todo) {
+  return todo.text; //returns each one in an array
+})
+
+//returns full todos that are completed
+console.log(todoText);
+const todoCompleted = todos.filter(function(todo) {
+  return todo.isCompleted === true;
+})
+console.log(todoCompleted);
