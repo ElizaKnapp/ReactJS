@@ -1,3 +1,4 @@
+
 console.log('Hello World');
 console.error('This is an error');
 console.warn('This is a warning');
@@ -109,3 +110,51 @@ const todoCompleted = todos.filter(function(todo) {
   return todo.isCompleted === true;
 })
 console.log(todoCompleted);
+
+//conditionals
+const hk = 10;
+if (hk == 10) { //matches info, triple equals === matches data type
+  console.log('x is 19')
+} else {
+  console.log('x is not 10')
+}
+
+//ternary operator
+const q = 10;
+const color = q > 10 ? 'red' : 'blue'; //? is then, : is else
+switch(color) {
+  case 'red':
+    console.log('color is red');
+    break;
+  case 'blue':
+    console.log('color is blue');
+    break;
+  default:
+    console.log('color is NOT red or blue');
+    break;
+}
+
+//functions
+function addNums(num1 = 1, num2 = 1) { //sets default parameters
+  console.log(num1 + num2);
+  //or
+  return num1 + num2;
+}
+
+addNums(5, 4);
+
+//or do this
+const addNumsEasy = (num1 = 1, num2 = 1) => num1 + num2; //returns the sm
+console.log(addNumsEasy(3, 4));
+
+//constructor function
+function Person(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = dob;
+}
+
+//instantiate object
+const person1 = new Person('John', 'Doe', '4-3-1980');
+
+console.log(person1);
