@@ -151,10 +151,21 @@ console.log(addNumsEasy(3, 4));
 function Person(firstName, lastName, dob) {
   this.firstName = firstName;
   this.lastName = lastName;
-  this.dob = dob;
+  this.dob = new Date(dob);
+}
+
+Person.prototype.getBirthYear = function() {
+  return this.dob.getFullYear();
+}
+
+//class
+class Person {
+  constructor(firstName, lastName, dob) {
+    //all the stuff, it's prettier than the person and the prototypes
+  }
 }
 
 //instantiate object
 const person1 = new Person('John', 'Doe', '4-3-1980');
 
-console.log(person1);
+console.log(person1
